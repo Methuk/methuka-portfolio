@@ -1,0 +1,257 @@
+/* ================= GENERAL PAGE ================= */
+
+/* Makes sizing easier to control */
+* {
+    box-sizing: border-box;
+}
+
+/* Removes the browser's default margin */
+body {
+    margin: 0;
+
+    /* Simple, clean font */
+    font-family: Arial, sans-serif;
+
+    /* Light background */
+    background-color: #eef2f7;
+
+    color: #1f2937;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    /* Puts the logo and navigation next to each other */
+    display: flex;
+
+    /* Logo goes left, navigation goes right */
+    justify-content: space-between;
+
+    /* Vertically centers everything */
+    align-items: center;
+
+    /* Space inside the header */
+    padding: 12px 40px;
+
+    /* White navbar */
+    background-color: white;
+
+    /* Small shadow underneath */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* Keeps the header visible when scrolling */
+    position: sticky;
+    top: 0;
+
+    /* Makes sure it stays above other content */
+    z-index: 100;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    /* Removes the normal link underline */
+    text-decoration: none;
+}
+
+.logo img {
+    /* Controls the logo height */
+    height: 55px;
+
+    /* Keeps the original image proportions */
+    width: auto;
+
+    /* Prevents a tiny gap underneath the image */
+    display: block;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    /* Places the navigation links in a row */
+    display: flex;
+
+    /* Space between each link */
+    gap: 30px;
+
+    /* Vertically centers the links */
+    align-items: center;
+}
+
+nav a {
+    /* Removes the default underline */
+    text-decoration: none;
+
+    /* Dark text */
+    color: #1f2937;
+
+    /* Makes links easier to read */
+    font-size: 16px;
+
+    /* Slightly thicker text */
+    font-weight: 600;
+
+    /* Smooth hover animation */
+    transition: 0.2s;
+}
+
+
+/* Changes the link when the mouse is over it */
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+    /* Stops the content becoming ridiculously wide */
+    max-width: 1100px;
+
+    /* Centers the main content */
+    margin: 0 auto;
+
+    /* Adds space around the content */
+    padding: 60px 25px;
+}
+
+
+/* ================= PHONE RESPONSIVENESS ================= */
+
+/*
+    When the screen is smaller than 700px,
+    change the layout so it works better on phones.
+*/
+
+@media (max-width: 700px) {
+    .welcome {
+        padding: 80px 15px;
+}
+
+    .welcome h1 {
+        font-size: 40px;
+}
+
+    .welcome-text {
+        font-size: 17px;
+}
+
+    header {
+        /* Stack the logo and navigation vertically */
+        flex-direction: column;
+
+        /* Smaller spacing on phones */
+        gap: 12px;
+
+        /* Smaller side padding */
+        padding: 12px 20px;
+    }
+
+    nav {
+        /* Reduce the gap between navigation links */
+        gap: 18px;
+
+        /* Allow links to wrap if necessary */
+        flex-wrap: wrap;
+
+        /* Center the links */
+        justify-content: center;
+    }
+
+    nav a {
+        /* Slightly smaller text on phones */
+        font-size: 14px;
+    }
+
+    main {
+        /* Less padding on small screens */
+        padding: 40px 15px;
+    }
+}
+
+/* ================= WELCOME PAGE ================= */
+
+.welcome {
+    /* Centers everything */
+    text-align: center;
+
+    /* Gives the welcome section lots of space */
+    padding: 120px 20px;
+}
+
+.welcome-small {
+    /* Small blue heading */
+    color: #2563eb;
+
+    /* Makes the text slightly thicker */
+    font-weight: 600;
+
+    /* Adds some space between letters */
+    letter-spacing: 2px;
+
+    /* Removes default paragraph spacing */
+    margin-bottom: 20px;
+}
+
+.welcome h1 {
+    /* Large main name */
+    font-size: 60px;
+
+    /* Removes default top margin */
+    margin: 0;
+
+    /* Adds space underneath */
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    /* Description underneath the name */
+    font-size: 20px;
+
+    /* Grey text */
+    color: #64748b;
+
+    /* Space before the button */
+    margin-bottom: 35px;
+}
+
+
+/* ================= ENTER BUTTON ================= */
+
+.enter-button {
+    /* Makes the link behave like a button */
+    display: inline-block;
+
+    /* Button size */
+    padding: 14px 28px;
+
+    /* Blue background */
+    background-color: #2563eb;
+
+    /* White text */
+    color: white;
+
+    /* Removes underline */
+    text-decoration: none;
+
+    /* Rounded corners */
+    border-radius: 8px;
+
+    /* Makes the text slightly thicker */
+    font-weight: 600;
+
+    /* Smooth animation */
+    transition: 0.2s;
+}
+
+
+/* Button hover effect */
+
+.enter-button:hover {
+    /* Moves the button slightly upwards */
+    transform: translateY(-3px);
+}
+

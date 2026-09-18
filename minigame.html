@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website work properly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Game - Methuka</title>
+
+    <!-- Connects the CSS -->
+    <link rel="stylesheet" href="minigame.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="methuka.png" alt="METHUKA logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="index4.html">About Me</a>
+            <a href="minigame.html">Mini Game</a>
+            <a href="index3.html">Contact Me</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= GAME ================= -->
+
+    <main>
+
+        <section class="game">
+
+            <p class="small-title">MINI GAME</p>
+
+            <h1>Memory Game</h1>
+
+            <p class="description">
+                Find all the matching pairs!
+            </p>
+
+
+            <!-- Game information -->
+
+            <div class="game-info">
+
+                <div>
+                    <span>Moves</span>
+                    <strong id="moves">0</strong>
+                </div>
+
+                <div>
+                    <span>Pairs</span>
+                    <strong id="pairs">0 / 8</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Cards -->
+
+            <div id="game-board" class="game-board">
+                <!-- JavaScript creates the cards here -->
+            </div>
+
+
+            <!-- Restart button -->
+
+            <button id="restart">Restart Game</button>
+
+
+            <!-- Win message -->
+
+            <p id="win-message" class="win-message"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Connects JavaScript -->
+    <script src="minigame.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,324 @@
+
+/* ================= GENERAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #eef2f7;
+
+    color: #1f2937;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 40px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    text-decoration: none;
+}
+
+.logo img {
+    height: 55px;
+
+    width: auto;
+
+    display: block;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #1f2937;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* ================= GAME ================= */
+
+main {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px;
+}
+
+.game {
+    text-align: center;
+}
+
+
+/* Small title */
+
+.small-title {
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* Main title */
+
+h1 {
+    font-size: 48px;
+
+    margin: 10px 0;
+}
+
+
+/* Description */
+
+.description {
+    color: #64748b;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= GAME INFO ================= */
+
+.game-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.game-info div {
+    background-color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.game-info span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.game-info strong {
+    font-size: 22px;
+
+    color: #2563eb;
+}
+
+
+/* ================= GAME BOARD ================= */
+
+.game-board {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+}
+
+
+/* ================= CARDS ================= */
+
+.card {
+    height: 130px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.2s;
+}
+
+
+/* Card hover */
+
+.card:hover {
+    transform: translateY(-3px);
+
+    background-color: #1d4ed8;
+}
+
+
+/* Card that has been revealed */
+
+.card.revealed {
+    background-color: white;
+
+    color: #1f2937;
+
+    cursor: default;
+}
+
+
+/* Matched card */
+
+.card.matched {
+    background-color: #dbeafe;
+
+    color: #2563eb;
+
+    cursor: default;
+}
+
+
+/* ================= RESTART BUTTON ================= */
+
+#restart {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#restart:hover {
+    transform: translateY(-2px);
+
+    background-color: #1d4ed8;
+}
+
+
+/* ================= WIN MESSAGE ================= */
+
+.win-message {
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #2563eb;
+
+    margin-top: 25px;
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 12px 20px;
+    }
+
+    nav {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 45px 15px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .game-board {
+        gap: 10px;
+    }
+
+    .card {
+        height: 90px;
+
+        font-size: 30px;
+    }
+}
+

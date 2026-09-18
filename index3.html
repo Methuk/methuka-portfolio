@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website work properly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me</title>
+
+    <!-- Connects this page to your CSS -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="methuka.png" alt="METHUKA logo">
+        </a>
+
+        <!-- Navigation menu -->
+        <nav>
+            <!-- These now link to actual pages -->
+            <a href="index4.html">About Me</a>
+            <a href="minigame.html">Mini Game</a>
+            <a href="index3.html">Contact Me</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+        <!-- Main heading -->
+        <h1>Contact Me</h1>
+
+        <!-- Introduction -->
+        <p class="intro">
+            Have a question, suggestion, or enquiry?
+            Feel free to get in touch with me using the form below.
+        </p>
+
+
+        <!-- ================= CONTACT FORM ================= -->
+
+        <section class="contact-box">
+
+            <h2>Send Me a Message</h2>
+
+            <!--
+                The form collects information from the user.
+                JavaScript/backend can be added later to actually send it.
+            -->
+            <form>
+
+                <!-- Name -->
+                <label for="name">Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <!-- Email -->
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <!-- Message -->
+                <label for="message">Message</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    rows="6"
+                    required
+                ></textarea>
+
+
+                <!-- Submit button -->
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= OTHER CONTACT OPTIONS ================= -->
+
+        <section class="contact-info">
+
+            <h2>Other Ways to Contact Me</h2>
+
+            <p>
+                📧 Email:
+                <a href="mailto:your@email.com">
+                    methukaweerawala@gmail.com
+                </a>
+            </p>
+
+           <div class="discord">
+    <span>Discord</span>
+    <strong>mw373_ #1374</strong>
+</div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>© 2026 Methuka. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>

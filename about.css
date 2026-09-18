@@ -1,0 +1,363 @@
+
+/* ================= GENERAL PAGE ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #1f2937;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 50px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    text-decoration: none;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+
+    text-decoration: none;
+    color: #1f2937;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+/* Animated blue line underneath links */
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2563eb;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ================= MAIN ================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 80px 25px;
+}
+
+
+/* ================= ABOUT HERO ================= */
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* Small blue heading */
+
+.about-me::before {
+    content: "WHO I AM";
+
+    display: block;
+
+    text-align: center;
+
+    color: #2563eb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Main heading */
+
+.about-me h1 {
+    text-align: center;
+
+    font-size: 56px;
+
+    margin: 0 0 25px 0;
+
+    background: linear-gradient(
+        90deg,
+        #1e3a8a,
+        #2563eb,
+        #38bdf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Intro paragraphs */
+
+.about-me > p {
+    max-width: 800px;
+
+    margin: 0 auto 18px auto;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #64748b;
+}
+
+
+/* ================= SECTION HEADINGS ================= */
+
+.about-me h2 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-top: 90px;
+    margin-bottom: 30px;
+
+    color: #111827;
+}
+
+
+/* ================= STAFF SECTION ================= */
+
+.about-me h2 + p,
+.about-me h2 + p + p,
+.about-me h2 + p + p + p {
+    max-width: 850px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #475569;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+
+/* ================= SKILL CARD ================= */
+
+.skill {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+/* Blue glow at the top of each card */
+
+.skill::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+}
+
+
+/* Card hover */
+
+.skill:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+}
+
+
+/* Skill title */
+
+.skill h3 {
+    margin-top: 5px;
+    margin-bottom: 12px;
+
+    font-size: 20px;
+
+    color: #2563eb;
+}
+
+
+/* Skill description */
+
+.skill p {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #64748b;
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 20px;
+    }
+
+
+    nav {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    main {
+        padding: 50px 18px;
+    }
+
+
+    .about-me h1 {
+        font-size: 40px;
+    }
+
+
+    .about-me > p {
+        font-size: 16px;
+    }
+
+
+    .about-me h2 {
+        font-size: 27px;
+
+        margin-top: 65px;
+    }
+
+
+    .skills {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .skill {
+        padding: 25px;
+    }
+}
